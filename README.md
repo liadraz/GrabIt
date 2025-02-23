@@ -1,4 +1,4 @@
-# GrabInjection
+# GrabIt
 A C# desktop application that reserves a device for some time.
 
 ## ***Application Requirements***
