@@ -1,53 +1,42 @@
 # GrabIt
-A C# desktop application that reserves a device for some time.
+A C# desktop application that reserves a device for a determined time.
 
-## ***Application Requirements***
+## ***Requirements***
+### **1. Device Management**
+- The system will track multiple injection devices each with a unique ID.
+- Only the root user can add or remove devices.
 
-1. **Device Management**
-	- The system will manage multiple injection devices, each identified by a unique name and IP address.
-	- A root user will have the ability to add and remove devices from the system.
+### **2. Reservation System**
+- Users can reserve an available device for a specified duration.
+- A reserved device is marked as busy and remains unavailable until:
+  - The reservation period expires.
+  - The current user manually releases it.
 
-2. **Reservation System**
-	- Users can reserve a device for a specific duration.
-	- Once a device is in use, it will be marked as busy and unavailable to others until:
-		- The reserved time ends.
-		- The current user manually releases it.
+### **3. Real-Time Status Display**
+- The main page will show the status of all devices (Available/Busy).
+- If a device is busy, its expected release time will be displayed.
+- Status updates will be reflected in real-time for all users.
 
-3. **Real-Time Status Display**
-	- The main page will display all devices along with their real-time status (Available / Busy).
-	- If a device is busy, the system will show the start time and expected release time.
-	- All users will have access to view device statuses at any time.
-
-
-## ***Architecture and Technology Choices***
-
+## ***Architecture***
 ### **Client-Server Model - Centralized Server**
-	- The client (C# desktop app) connects to a central REST API that will manage the devices, reservations, and users.
-	- A SQL Server or PostgreSQL database stores device and reservation information.
-	- The server handles real-time updates using SignalR (WebSockets).
+The client-server architecture was chosen as many users can interact with one system simultaneously- 
+1. The client (C# desktop app) connects to a central REST API that manages the devices, reservations, and users.
+2. A MySQL Server database stores device and reservation information.
+3. The server handles real-time updates using SignalR.
 
-### Motivation for choosing this architecture model - 
-	Pros:
-	- Users can see real-time status updates.
-	- Can be accessed from multiple computers.
-	- Scalable and more future-proof.
-	- multiple users can interact with the system simultaneously.
-	Cons:
-	- Requires a network connection.
-	- More complex setup with a backend.
+## **Tech Stack**
+- Frontend: WPF with the use of a modern UI with MVVM
+- Backend: .NET 7+ and ASP.NET Web API
+- Database: MySQL
+- Real-time Communication: SignalR
+- Authentication: JWT (TODO if needed)
+- Deployment: Self-hosted or cloud (TODO CHOOSE LATER Azure, AWS)
 
-### **Tech Stack**
-	- Frontend: WPF (for a modern UI with MVVM)
-	- Backend: .NET 7+ Web API
-	- Database: PostgreSQL or SQL Server ( TODO Will choose one of them )
-	- Real-time Communication: SignalR
-	- Authentication: JWT (TODO if needed)
-	- Deployment: Self-hosted or cloud (Azure, AWS)
-
-### **Workflow**
+## **Workflow**
 1. A user logs in to the desktop app.
 2. The app fetches the device list from the server.
 3. When a user reserves a device, the backend updates the database and broadcasts the change via SignalR.
 4. Other users see instant status updates.
 5. When the reservation time ends, the device automatically becomes available.
+
 
