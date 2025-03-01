@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrabIt.Domain", "GrabIt.Domain\GrabIt.Domain.csproj", "{5EE9B7FB-6EAB-435A-842D-BC73E4608A23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrabIt.Application", "GrabIt.Application\GrabIt.Application.csproj", "{BA501ECA-34B0-4AFF-B954-880F0A9D8548}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrabIt.Infrastructure", "GrabIt.Infrastructure\GrabIt.Infrastructure.csproj", "{2A2BC6DD-D888-44F1-BF91-2BFA64200350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrabIt.Client", "GrabIt.Client\GrabIt.Client.csproj", "{6D37AE04-2D95-49F5-BA91-6D3A62249D89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrabIt.API", "GrabIt.API\GrabIt.API.csproj", "{277122FD-6732-4D42-BFC3-164070CFB251}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrabIt.Tests", "GrabIt.Tests\GrabIt.Tests.csproj", "{59052D2C-9A69-4805-858A-31B7BB15E7EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EE9B7FB-6EAB-435A-842D-BC73E4608A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE9B7FB-6EAB-435A-842D-BC73E4608A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE9B7FB-6EAB-435A-842D-BC73E4608A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE9B7FB-6EAB-435A-842D-BC73E4608A23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA501ECA-34B0-4AFF-B954-880F0A9D8548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA501ECA-34B0-4AFF-B954-880F0A9D8548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA501ECA-34B0-4AFF-B954-880F0A9D8548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA501ECA-34B0-4AFF-B954-880F0A9D8548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A2BC6DD-D888-44F1-BF91-2BFA64200350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A2BC6DD-D888-44F1-BF91-2BFA64200350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A2BC6DD-D888-44F1-BF91-2BFA64200350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A2BC6DD-D888-44F1-BF91-2BFA64200350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D37AE04-2D95-49F5-BA91-6D3A62249D89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D37AE04-2D95-49F5-BA91-6D3A62249D89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D37AE04-2D95-49F5-BA91-6D3A62249D89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D37AE04-2D95-49F5-BA91-6D3A62249D89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{277122FD-6732-4D42-BFC3-164070CFB251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{277122FD-6732-4D42-BFC3-164070CFB251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{277122FD-6732-4D42-BFC3-164070CFB251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{277122FD-6732-4D42-BFC3-164070CFB251}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59052D2C-9A69-4805-858A-31B7BB15E7EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59052D2C-9A69-4805-858A-31B7BB15E7EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59052D2C-9A69-4805-858A-31B7BB15E7EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59052D2C-9A69-4805-858A-31B7BB15E7EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1524CCDF-433F-4CBD-AFA2-E1AFE77839B0}
+	EndGlobalSection
+EndGlobal
