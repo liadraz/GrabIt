@@ -24,18 +24,6 @@ The client-server architecture was chosen as many users can interact with one sy
 2. A MySQL Server database stores device and reservation information.
 3. The server handles real-time updates using SignalR.
 
-```
-+------------------------+
-|  Web API (REST API)    | <--->   Client (Desktop App - WPF)
-+------------------------+                 |
-            |                              |
-            v                              v
-+------------------------+         +----------------------+
-| Domain Layer           | <--->   |   Database Layer     |
-|                        |         |                      |
-+------------------------+         +----------------------+
-```
-
 ## **Tech Stack**
 - Frontend: WPF with the use of a modern UI with MVVM
 - Backend: .NET 7+ and ASP.NET Web API
@@ -86,5 +74,9 @@ The app is divided into different projects, each serving a specific role within 
 3. When a user reserves a device, the backend updates the database and broadcasts the change via SignalR.
 4. Other users see instant status updates.
 5. When the reservation time ends, the device automatically becomes available.
+
+# UI
+
+![image](https://github.com/user-attachments/assets/aebff914-4428-4361-aa9c-92fed8207d44)
 
 
